@@ -1,0 +1,19 @@
+server:
+  port: 1314
+spring:
+  application:
+    name: testprovider
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: scott
+    password: tiger
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    show-sql: true
+    database: oracle
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
